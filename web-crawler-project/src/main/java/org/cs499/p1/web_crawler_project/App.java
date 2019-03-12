@@ -15,14 +15,15 @@ public class App
     public static void main( String[] args )
     {
        Web_Crawler crawler=new Web_Crawler();  
-       crawler.crawl("https://www.oracle.com/java/",0);
+       crawler.crawl("https://en.wikipedia.org/wiki/Computer_science",0);
        HashMap<String,Document> result=crawler.getDocuments();
-       
+       Zipf_Distribution zipf=new Zipf_Distribution(result);
+       zipf.calculateFrequency();
 //      for(String key:result.keySet())
 //      {
 //    	  System.out.println(result.get(key).toString());
 //      }
-       
+//       
        
      
       
