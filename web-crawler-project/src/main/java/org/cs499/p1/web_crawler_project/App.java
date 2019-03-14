@@ -19,14 +19,7 @@ public class App
        crawler.crawl("https://www.cosmopolitan.com/food-cocktails/a23440/health-benefits-dark-chocolate/",0);
        HashMap<String,Document> result=crawler.getDocuments();
        Zipf_Distribution zipf=new Zipf_Distribution(result);
-       zipf.calculateFrequency();
-//      for(String key:result.keySet())
-//      {
-//    	  System.out.println(result.get(key).toString());
-//      }
-//       
-       
-     
-      
+       zipf.calculateFrequency();   
+       zipf.rankTopWords(); 
     }
 }

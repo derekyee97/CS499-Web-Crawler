@@ -73,7 +73,7 @@ public class Web_Crawler
 				{
 					crawl(pageToVisit.attr("abs:href"),visited.size());  //this loop will go visit other urls.
 					totalLinks++;
-					System.out.println(totalLinks);
+					//System.out.println(totalLinks);
 				}
 				writeToCSV[1]=Integer.toString(totalLinks);
 				writeCSV.writeNext(writeToCSV);
