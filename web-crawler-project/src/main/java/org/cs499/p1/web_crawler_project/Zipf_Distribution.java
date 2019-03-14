@@ -88,9 +88,6 @@ public class Zipf_Distribution
             rankedWords.add(frequency.getKey()); 
         } 
         
-        System.out.println(Arrays.toString(rankedWords.toArray()));
-	        
+        //System.out.println(Arrays.toString(rankedWords.toArray()));     
 	}
-	
-	
 }

@@ -2,8 +2,10 @@ package org.cs499.p1.web_crawler_project;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Set;
+
 
 import org.jsoup.nodes.Document;
 
@@ -19,7 +21,10 @@ public class App
        crawler.crawl("https://www.cosmopolitan.com/food-cocktails/a23440/health-benefits-dark-chocolate/",0);
        HashMap<String,Document> result=crawler.getDocuments();
        Zipf_Distribution zipf=new Zipf_Distribution(result);
-       zipf.calculateFrequency();   
+       zipf.calculateFrequency(); 
+       System.out.println("FREQUENCIES:");
+       System.out.println(Arrays.asList(zipf.wordFrequency));
+       System.out.println("RANK:");
        zipf.rankTopWords(); 
     }
 }
